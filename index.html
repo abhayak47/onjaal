@@ -5,32 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Onjaal | Connected business software, starting with HRMS</title>
 <meta name="description" content="Onjaal builds connected, practical software for growing businesses. Explore Onjaal HRMS, the first product in a wider business ecosystem.">
-<meta name="theme-color" content="#f7f7f4">
+<meta name="theme-color" content="#f6f5f1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Onjaal | Connected business software">
 <meta property="og:description" content="Practical, connected software for growing businesses, starting with Onjaal HRMS.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-display-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/styles.css">
 <script>document.documentElement.classList.remove('no-js')</script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mark" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#0a1020"/><circle cx="16" cy="16" r="9" fill="none" stroke="#fff" stroke-width="2.4"/><path d="M16 16l6.4-6.4" stroke="#8c9cff" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="16" r="3" fill="#8c9cff"/><circle cx="22.4" cy="9.6" r="2.3" fill="#8c9cff"/></symbol>
+  <symbol id="arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="check" viewBox="0 0 16 16"><path d="M2.5 8.5 6 12l7.5-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="info" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 7.2v4M8 4.9v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header" id="top">
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Onjaal home">
-      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0b1220"/><path d="M32 14 18 24v16l14 10 14-10V24z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><circle cx="32" cy="32" r="5" fill="#6f86ff"/></svg>
-      Onjaal
-    </a>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu"><span></span></button>
+    <a class="brand" href="#top" aria-label="Onjaal home"><svg aria-hidden="true"><use href="#mark"/></svg>Onjaal</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#top">Home</a></li>
       <li><a href="#products">Products</a></li>
       <li><a href="#solutions">Solutions</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a class="btn btn-primary btn-sm" href="#hrms">Explore Onjaal HRMS</a></li>
     </ul>
+    <a class="btn btn-primary btn-sm nav-cta" href="#hrms"><span class="long">Explore Onjaal HRMS</span><span class="short">Explore HRMS</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Menu"><span></span></button>
   </div>
 </header>
 
@@ -39,37 +44,61 @@
 <section class="hero" aria-labelledby="hero-h">
   <div class="wrap hero-grid">
     <div>
-      <span class="badge"><b>Now building</b> Onjaal HRMS</span>
+      <span class="badge"><b>In development</b> Onjaal HRMS</span>
       <h1 id="hero-h">Business software that works as <em>one connected system.</em></h1>
-      <p class="lead">Onjaal builds practical, well-designed software for growing businesses. We start with HR management, and we're designing every product to work together instead of living in separate silos.</p>
+      <p class="lead">Onjaal builds practical, well-designed software for growing businesses. We're starting with HR management, and designing every product to work together instead of living in separate silos.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#hrms">Explore Onjaal HRMS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn btn-primary" href="#hrms">Explore Onjaal HRMS <svg aria-hidden="true"><use href="#arrow"/></svg></a>
         <a class="btn btn-ghost" href="#products">See the ecosystem</a>
       </div>
-      <p class="hero-note">An early look at what we're building. Details will be added as products are released.</p>
+      <ul class="facts">
+        <li><svg aria-hidden="true"><use href="#check"/></svg>Made for HR teams, employees and admins</li>
+        <li><svg aria-hidden="true"><use href="#check"/></svg>One design language across products</li>
+      </ul>
     </div>
 
     <div class="stage">
-      <div class="float f1"><span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="2"/><circle cx="3" cy="3.5" r="1.4"/><circle cx="13" cy="3.5" r="1.4"/><circle cx="8" cy="14" r="1.4"/><path d="M6.6 7 4 4.5M9.4 7 12 4.5M8 10v2.6"/></svg></span><div><b>Connected by design</b><span>Products share one foundation</span></div></div>
-      <div class="mock" role="img" aria-label="Illustrative preview of the Onjaal HRMS interface with sample data">
-        <div class="mock-bar"><i></i><i></i><i></i><span>Illustrative preview</span></div>
-        <div class="mock-body">
-          <ul class="mock-side"><li class="logo-s" style="list-style:none">Onjaal HRMS</li><li class="on">People</li><li>Time off</li><li>Attendance</li><li>Documents</li><li>Settings</li></ul>
-          <div class="mock-main">
-            <div class="mock-title"><b>People</b><span class="chip info">Sample data</span></div>
-            <div class="cards3">
-              <div><small>Directory</small><div class="bar" style="--w:70%"></div></div>
-              <div><small>Requests</small><div class="bar" style="--w:40%"></div></div>
-              <div><small>Onboarding</small><div class="bar" style="--w:55%"></div></div>
+      <svg class="stage-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M16 6C26 24 36 38 50 50"/><path d="M92 6C82 24 66 38 50 50"/><path d="M84 94C76 80 62 64 50 50"/>
+      </svg>
+      <span class="node live n0"><i></i>Onjaal HRMS · in development</span>
+      <span class="node n1"><i></i>Next module · exploring</span>
+      <span class="node n2"><i></i>Next module · exploring</span>
+
+      <div class="app" role="img" aria-label="Illustrative concept of the Onjaal HRMS interface, using sample data">
+        <div class="app-chrome"><i></i><i></i><i></i><span>Concept preview</span></div>
+        <div class="app-strip"><svg aria-hidden="true"><use href="#info"/></svg>Concept design with sample data. Not working software.</div>
+        <div class="app-body">
+          <ul class="rail"><li class="ws"><b></b>Onjaal HRMS</li><li class="item">Overview</li><li class="item on">People</li><li class="item">Requests</li><li class="item">Documents</li><li class="item">Settings</li></ul>
+          <div class="pane">
+            <div class="pane-top"><div class="crumb">Workspace / <b>People</b></div><div class="search">Search</div></div>
+            <h4>People</h4>
+            <div class="tbl">
+              <div class="tr th"><span>Name</span><span>Role</span><span>Status</span></div>
+              <div class="tr"><div class="who"><i class="av"></i><div><span>Sample Employee A</span></div></div><div class="sk" style="width:70%"></div><span class="chip ok">Active</span></div>
+              <div class="tr"><div class="who"><i class="av b"></i><div><span>Sample Employee B</span></div></div><div class="sk" style="width:55%"></div><span class="chip wait">Pending</span></div>
+              <div class="tr"><div class="who"><i class="av c"></i><div><span>Sample Employee C</span></div></div><div class="sk" style="width:64%"></div><span class="chip ok">Active</span></div>
+              <div class="tr"><div class="who"><i class="av"></i><div><span>Sample Employee D</span></div></div><div class="sk" style="width:48%"></div><span class="chip">Invited</span></div>
             </div>
-            <div class="row"><span class="avatar"></span><div><div>Sample Employee A<small>Role placeholder</small></div></div><span class="chip ok">Active</span></div>
-            <div class="row"><span class="avatar" style="background:linear-gradient(135deg,#ffd9a8,#c9d1ff)"></span><div><div>Sample Employee B<small>Role placeholder</small></div></div><span class="chip wait">Pending</span></div>
-            <div class="row"><span class="avatar" style="background:linear-gradient(135deg,#9fe0dc,#ffd9a8)"></span><div><div>Sample Employee C<small>Role placeholder</small></div></div><span class="chip ok">Active</span></div>
           </div>
         </div>
       </div>
-      <div class="float f2"><span class="dot"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5 6 12.5 14 4"/></svg></span><div><b>Built for clarity</b><span>Simple, focused workflows</span></div></div>
-      <p class="tag-illus">Illustrative preview. Not real customer data.</p>
+      <p class="stage-note">Illustrative preview. Not real customer data.</p>
+      <div class="eco-strip" aria-label="Ecosystem status">
+        <span class="node live"><i></i>Onjaal HRMS · in development</span>
+        <span class="node"><i></i>More modules · exploring</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE TO START -->
+<section class="paths" aria-label="Where to start">
+  <div class="wrap">
+    <div class="paths-grid reveal">
+      <a class="path" href="#hrms"><div><small>I work in HR</small><b>See what Onjaal HRMS is for</b></div><span class="arrow"><svg aria-hidden="true"><use href="#arrow"/></svg></span></a>
+      <a class="path" href="#solutions"><div><small>I run a business</small><b>How connected tools help</b></div><span class="arrow"><svg aria-hidden="true"><use href="#arrow"/></svg></span></a>
+      <a class="path" href="#products"><div><small>I'm just curious</small><b>Explore the ecosystem</b></div><span class="arrow"><svg aria-hidden="true"><use href="#arrow"/></svg></span></a>
     </div>
   </div>
 </section>
@@ -87,7 +116,7 @@
         <span class="status now">In development</span>
         <h3>Onjaal HRMS</h3>
         <p>A human resource management system to help organizations run their HR operations in one place, with an interface designed to be clear for HR teams, employees and administrators alike.</p>
-        <a class="btn btn-white" href="#hrms">Explore Onjaal HRMS <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <div class="mini"><a class="btn btn-white" href="#hrms">Explore Onjaal HRMS <svg aria-hidden="true"><use href="#arrow"/></svg></a></div>
       </article>
       <div class="eco-side">
         <article class="panel dashed reveal">
@@ -97,8 +126,8 @@
         </article>
         <article class="panel dashed reveal">
           <span class="status soon">Shared foundation</span>
-          <h3>Common experience</h3>
-          <p>One consistent look, feel and logic across everything we ship, so learning one Onjaal product helps with the next.</p>
+          <h3>One common experience</h3>
+          <p>A consistent look, feel and logic across everything we ship, so learning one Onjaal product helps with the next.</p>
         </article>
       </div>
     </div>
@@ -106,56 +135,89 @@
 </section>
 
 <!-- HRMS SHOWCASE -->
-<section id="hrms" aria-labelledby="hrms-h">
+<section class="show" id="hrms" aria-labelledby="hrms-h">
   <div class="wrap show-grid">
     <div class="reveal">
       <span class="eyebrow">Onjaal HRMS</span>
-      <h2 id="hrms-h" style="margin:14px 0 16px">HR operations, organized in one place.</h2>
+      <h2 id="hrms-h" style="margin:16px 0 18px">HR operations, organized in one place.</h2>
       <p class="lead">Onjaal HRMS is designed to take the scattered parts of HR work and bring them into a single, easy-to-use system.</p>
       <div class="audiences">
-        <div class="aud"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c2 .6 3.2 2.4 3.5 5.2"/></svg></span><div><h3>For HR teams</h3><p>A clear home for people-related work, so less time goes to chasing information.</p></div></div>
-        <div class="aud"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c.8-4.2 4-6 8-6s7.2 1.8 8 6"/></svg></span><div><h3>For employees</h3><p>A straightforward experience that makes everyday HR tasks easier to find and complete.</p></div></div>
-        <div class="aud"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 14h3"/></svg></span><div><h3>For business administrators</h3><p>Better visibility across the organization, with a foundation that can grow with the business.</p></div></div>
+        <div class="aud"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c2 .6 3.2 2.4 3.5 5.2"/></svg></span><div><h3>For HR teams</h3><p>A clear home for people-related work, so less time goes to chasing information.</p></div></div>
+        <div class="aud"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c.8-4.2 4-6 8-6s7.2 1.8 8 6"/></svg></span><div><h3>For employees</h3><p>A straightforward experience that makes everyday HR tasks easier to find and complete.</p></div></div>
+        <div class="aud"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 14h3"/></svg></span><div><h3>For business administrators</h3><p>Better visibility across the organization, with a foundation that can grow with the business.</p></div></div>
       </div>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#contact">Express interest <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-        <a class="btn btn-ghost" href="#values">How we build</a>
+        <a class="btn btn-primary" href="#contact">Express interest <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+        <a class="link" href="#faq">Read the FAQ <svg aria-hidden="true"><use href="#arrow"/></svg></a>
       </div>
-      <p class="note">Specific features will be published here as they are finalized. The interface shown is an illustration, not a screenshot of a released product.</p>
     </div>
 
-    <div class="reveal">
-      <div class="tabs" role="tablist" aria-label="Illustrative HRMS views">
-        <button class="tab" role="tab" id="t1" aria-selected="true" aria-controls="p1">Overview</button>
-        <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="p2" tabindex="-1">Requests</button>
+    <div class="show-side reveal">
+      <div class="tabs" role="tablist" aria-label="Concept screens">
+        <button class="tab" role="tab" id="t0" aria-selected="false" aria-controls="p0" tabindex="-1" data-rail="1">Overview</button>
+        <button class="tab" role="tab" id="t1" aria-selected="true" aria-controls="p1" data-rail="2">People</button>
+        <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="p2" tabindex="-1" data-rail="3">Requests</button>
       </div>
-      <div class="mock" role="img" aria-label="Illustrative HRMS interface using placeholder data">
-        <div class="mock-bar"><i></i><i></i><i></i><span>Illustrative preview</span></div>
-        <div class="mock-body">
-          <ul class="mock-side"><li class="logo-s" style="list-style:none">Onjaal HRMS</li><li class="on">Overview</li><li>People</li><li>Requests</li><li>Documents</li><li>Settings</li></ul>
-          <div class="mock-main">
-            <div class="tabpanel" id="p1" role="tabpanel" aria-labelledby="t1">
-              <div class="mock-title"><b>Workspace overview</b><span class="chip info">Illustrative</span></div>
-              <div class="cards3">
-                <div><small>Section A</small><div class="bar" style="--w:60%"></div></div>
-                <div><small>Section B</small><div class="bar" style="--w:35%"></div></div>
-                <div><small>Section C</small><div class="bar" style="--w:80%"></div></div>
+      <div class="app" role="group" aria-label="Illustrative concept of the Onjaal HRMS interface, using sample data">
+        <div class="app-chrome"><i></i><i></i><i></i><span>Concept preview</span></div>
+        <div class="app-strip"><svg aria-hidden="true"><use href="#info"/></svg>Concept design with sample data. Not working software.</div>
+        <div class="app-body">
+          <ul class="rail" id="rail" aria-hidden="true"><li class="ws"><b></b>Onjaal HRMS</li><li class="item">Overview</li><li class="item on">People</li><li class="item">Requests</li><li class="item">Documents</li><li class="item">Settings</li></ul>
+          <div class="pane">
+            <div class="tabpanel" id="p0" role="tabpanel" aria-labelledby="t0" hidden>
+              <div class="pane-top"><div class="crumb">Workspace / <b>Overview</b></div><div class="search">Search</div></div>
+              <h4>Workspace overview</h4>
+              <div class="cards3"><div><small>Section A</small><div class="sk" style="width:60%"></div><div class="sk" style="width:40%"></div></div><div><small>Section B</small><div class="sk" style="width:50%"></div><div class="sk" style="width:70%"></div></div><div><small>Section C</small><div class="sk" style="width:80%"></div><div class="sk" style="width:35%"></div></div></div>
+              <div class="split">
+                <div class="card-s"><h5>Recent activity (sample)</h5>
+                  <div class="who" style="margin-bottom:10px"><i class="av"></i><div><span>Sample update one</span><small>Placeholder text</small></div></div>
+                  <div class="who" style="margin-bottom:10px"><i class="av b"></i><div><span>Sample update two</span><small>Placeholder text</small></div></div>
+                  <div class="who"><i class="av c"></i><div><span>Sample update three</span><small>Placeholder text</small></div></div></div>
+                <div class="card-s"><h5>Upcoming (sample)</h5><div class="sk" style="width:90%"></div><div class="sk" style="width:65%"></div><div class="sk" style="width:78%"></div></div>
               </div>
-              <div class="skeleton" style="width:90%"></div><div class="skeleton" style="width:72%"></div><div class="skeleton" style="width:84%"></div>
-              <div class="row"><span class="avatar"></span><div>Sample item one<small>Placeholder description</small></div><span class="chip">Draft</span></div>
-              <div class="row"><span class="avatar" style="background:linear-gradient(135deg,#ffd9a8,#c9d1ff)"></span><div>Sample item two<small>Placeholder description</small></div><span class="chip ok">Done</span></div>
+            </div>
+            <div class="tabpanel" id="p1" role="tabpanel" aria-labelledby="t1">
+              <div class="pane-top"><div class="crumb">Workspace / <b>People</b></div><div class="search">Search</div></div>
+              <h4>People</h4>
+              <div class="split">
+                <div class="tbl">
+                  <div class="tr th"><span>Name</span><span>Role</span><span>Status</span></div>
+                  <div class="tr"><div class="who"><i class="av"></i><div><span>Sample Employee A</span></div></div><div class="sk" style="width:70%"></div><span class="chip ok">Active</span></div>
+                  <div class="tr"><div class="who"><i class="av b"></i><div><span>Sample Employee B</span></div></div><div class="sk" style="width:55%"></div><span class="chip wait">Pending</span></div>
+                  <div class="tr"><div class="who"><i class="av c"></i><div><span>Sample Employee C</span></div></div><div class="sk" style="width:64%"></div><span class="chip ok">Active</span></div>
+                  <div class="tr"><div class="who"><i class="av"></i><div><span>Sample Employee D</span></div></div><div class="sk" style="width:48%"></div><span class="chip">Invited</span></div>
+                </div>
+                <div class="card-s"><h5>Profile (sample)</h5>
+                  <div class="who" style="margin-bottom:12px"><i class="av b"></i><div><span>Sample Employee B</span><small>Role placeholder</small></div></div>
+                  <div class="sk" style="width:90%"></div><div class="sk" style="width:60%"></div><div class="sk" style="width:75%"></div>
+                  <span class="chip wait" style="margin-top:6px">Pending</span></div>
+              </div>
             </div>
             <div class="tabpanel" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
-              <div class="mock-title"><b>Requests</b><span class="chip info">Illustrative</span></div>
-              <div class="row"><span class="avatar"></span><div>Sample request A<small>Placeholder · awaiting review</small></div><span class="chip wait">Pending</span></div>
-              <div class="row"><span class="avatar" style="background:linear-gradient(135deg,#9fe0dc,#ffd9a8)"></span><div>Sample request B<small>Placeholder · reviewed</small></div><span class="chip ok">Approved</span></div>
-              <div class="row"><span class="avatar" style="background:linear-gradient(135deg,#ffd9a8,#c9d1ff)"></span><div>Sample request C<small>Placeholder · awaiting review</small></div><span class="chip wait">Pending</span></div>
-              <div class="skeleton" style="width:80%;margin-top:14px"></div><div class="skeleton" style="width:60%"></div>
+              <div class="pane-top"><div class="crumb">Workspace / <b>Requests</b></div><div class="search">Search</div></div>
+              <h4>Requests</h4>
+              <div class="split">
+                <div class="tbl">
+                  <div class="tr th"><span>Request</span><span>From</span><span>Status</span></div>
+                  <div class="tr"><div class="who"><i class="av"></i><div><span>Sample request A</span></div></div><div class="sk" style="width:60%"></div><span class="chip wait">Pending</span></div>
+                  <div class="tr"><div class="who"><i class="av b"></i><div><span>Sample request B</span></div></div><div class="sk" style="width:72%"></div><span class="chip ok">Approved</span></div>
+                  <div class="tr"><div class="who"><i class="av c"></i><div><span>Sample request C</span></div></div><div class="sk" style="width:50%"></div><span class="chip wait">Pending</span></div>
+                </div>
+                <div class="card-s"><h5>Review (sample)</h5>
+                  <div class="sk" style="width:85%"></div><div class="sk" style="width:60%"></div><div class="sk" style="width:70%"></div>
+                  <span class="btn-s">Approve</span><span class="btn-s alt">Decline</span></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <p class="note" style="margin-top:14px">Illustrative interface with sample data. Not real customer data.</p>
+
+      <div class="status-box">
+        <div><h4>What we can say today</h4>
+          <ul><li>Onjaal HRMS is in development</li><li>It's aimed at helping organizations manage HR operations</li><li>It's designed for HR teams, employees and administrators</li></ul></div>
+        <div><h4>Not yet confirmed</h4>
+          <ul><li>Feature list and modules</li><li>Release date and pricing</li><li>Integrations and availability</li></ul></div>
+      </div>
     </div>
   </div>
 </section>
@@ -176,7 +238,7 @@
   </div>
 </section>
 
-<!-- DIFFERENTIATION -->
+<!-- PRINCIPLES -->
 <section id="values" aria-labelledby="prin-h">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -185,10 +247,10 @@
       <p>These are the commitments guiding how we design and build Onjaal products.</p>
     </div>
     <div class="prin-grid">
-      <article class="prin reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/></svg></span><h3>Usability first</h3><p>Software should be understandable without a manual. We design for clarity before complexity.</p></article>
-      <article class="prin reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.3 11l7.4-3.9M8.3 13l7.4 3.9"/></svg></span><h3>Connected workflows</h3><p>Each product is planned as part of a whole, so work can flow between tools.</p></article>
-      <article class="prin reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M14 4h6v6M4 14v6h6"/></svg></span><h3>Thoughtful design</h3><p>Consistent, considered interfaces that respect people's time and attention.</p></article>
-      <article class="prin reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.2 7.8 8 9 4.8-1.2 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Honest communication</h3><p>We tell you what is available today and what is still being built.</p></article>
+      <article class="prin reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></span><h3>Usability first</h3><p>Software should be understandable without a manual. We design for clarity before complexity.</p></article>
+      <article class="prin reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.3 11l7.4-3.9M8.3 13l7.4 3.9"/></svg></span><h3>Connected workflows</h3><p>Each product is planned as part of a whole, so work can flow between tools.</p></article>
+      <article class="prin reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M4 10h16M10 10v10"/></svg></span><h3>Thoughtful design</h3><p>Consistent, considered interfaces that respect people's time and attention.</p></article>
+      <article class="prin reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.2 7.8 8 9 4.8-1.2 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Honest communication</h3><p>We tell you what is available today and what is still being built.</p></article>
     </div>
   </div>
 </section>
@@ -198,8 +260,8 @@
   <div class="wrap about-grid">
     <div class="reveal">
       <span class="eyebrow">About Onjaal</span>
-      <h2 id="about-h" style="margin:14px 0 22px">Useful technology, woven together.</h2>
-      <p>"Jaal" means a net or web, and that idea sits at the center of Onjaal: a business technology brand building software where the pieces strengthen each other.</p>
+      <h2 id="about-h" style="margin:16px 0 24px">Useful technology, woven together.</h2>
+      <p style="margin-top:0">"Jaal" means a net or web, and that idea sits at the center of Onjaal: a business technology brand building software where the pieces strengthen each other.</p>
       <p>Too much business software is powerful but hard to use, or simple but isolated. We want to build tools that are practical on their own and more valuable together.</p>
       <p>We're starting with Onjaal HRMS and growing the ecosystem carefully, one well-made product at a time.</p>
     </div>
@@ -207,10 +269,28 @@
       <svg viewBox="0 0 460 340" fill="none">
         <g stroke="#c9ceda" stroke-width="1.4"><path d="M230 170 90 80M230 170l140-90M230 170 90 260M230 170l140 90M90 80l-50 90M90 260l-50-90M370 80l50 90M370 260l50-90M90 80h280M90 260h280"/></g>
         <g fill="#fff" stroke="#c9ceda" stroke-width="1.4"><circle cx="90" cy="80" r="14"/><circle cx="370" cy="80" r="14"/><circle cx="90" cy="260" r="14"/><circle cx="370" cy="260" r="14"/><circle cx="40" cy="170" r="10"/><circle cx="420" cy="170" r="10"/></g>
-        <g stroke-dasharray="4 4"><circle class="pulse" cx="90" cy="80" r="14" stroke="#3347e8"/><circle class="pulse" cx="370" cy="260" r="14" stroke="#3347e8"/></g>
-        <circle cx="230" cy="170" r="42" fill="#0b1220"/><circle cx="230" cy="170" r="56" stroke="#3347e8" stroke-opacity=".35"/>
+        <g stroke-dasharray="4 4"><circle class="pulse" cx="90" cy="80" r="14" stroke="#3142e6"/><circle class="pulse" cx="370" cy="260" r="14" stroke="#3142e6"/></g>
+        <circle cx="230" cy="170" r="44" fill="#0a1020"/><circle cx="230" cy="170" r="58" stroke="#3142e6" stroke-opacity=".35"/>
         <text x="230" y="176" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" font-family="Inter,system-ui,sans-serif">HRMS</text>
       </svg>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq-grid">
+    <div class="reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 id="faq-h" style="margin:16px 0 18px">Straight answers.</h2>
+      <p class="lead">What's available, what's still being built, and how to follow along.</p>
+    </div>
+    <div class="reveal">
+      <details open><summary>What is Onjaal?</summary><p>Onjaal is a business technology brand building connected, practical software for growing businesses. Its first product is Onjaal HRMS.</p></details>
+      <details><summary>Is Onjaal HRMS available yet?</summary><p>Not yet. Onjaal HRMS is in development, and the interface on this site is a concept design with sample data, not a working product.</p></details>
+      <details><summary>What features will it include?</summary><p>We haven't published a confirmed feature list. We'll add specifics here once they're final, rather than promise things that aren't ready.</p></details>
+      <details><summary>Are other products planned?</summary><p>We're exploring more connected modules, but none are announced. Anything beyond HRMS is exploratory for now.</p></details>
+      <details><summary>How can I stay in touch?</summary><p>Use the form in the contact section to note your interest. It isn't connected to email yet, so we'll publish a verified contact address on this site as soon as it's confirmed.</p></details>
     </div>
   </div>
 </section>
@@ -223,19 +303,20 @@
         <h2 id="cta-h">See where Onjaal is headed.</h2>
         <p>Interested in Onjaal HRMS, or in the wider ecosystem? Tell us a little about you and what you're looking for.</p>
         <div class="cta-row">
-          <a class="btn btn-white" href="#hrms">Explore Onjaal HRMS</a>
-          <a class="btn btn-line" href="#name">Contact us</a>
+          <a class="btn btn-white" href="#hrms">Explore Onjaal HRMS <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          <a class="btn btn-line" href="#name">Write to us</a>
         </div>
+        <div class="cta-links"><a href="#faq">Read the FAQ</a><a href="#products">Back to the ecosystem</a></div>
       </div>
       <form class="form" id="contactForm" novalidate data-contact-email="">
         <h3>Express interest</h3>
-        <p class="hint">All fields except the message are required.</p>
-        <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required><span class="err">Please enter your name.</span></div>
-        <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required><span class="err">Please enter a valid email address.</span></div>
+        <div class="notice" id="formNotice"><svg aria-hidden="true"><use href="#info"/></svg><span id="noticeText">This form can't deliver messages yet, because no contact address or form service is connected. You can still prepare and copy your message.</span></div>
+        <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required aria-describedby="name-err"><span class="err" id="name-err">Please enter your name.</span></div>
+        <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err"><span class="err" id="email-err">Please enter a valid email address.</span></div>
         <div class="field"><label for="interest">I'm interested in</label>
           <select id="interest" name="interest"><option>Onjaal HRMS</option><option>The wider ecosystem</option><option>Something else</option></select></div>
         <div class="field"><label for="msg">Message (optional)</label><textarea id="msg" name="message"></textarea></div>
-        <button class="btn btn-primary" type="submit">Send</button>
+        <div class="form-actions"><button class="btn btn-primary" type="submit" id="submitBtn">Prepare message</button></div>
         <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
       </form>
     </div>
@@ -247,10 +328,10 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="#top"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0b1220"/><path d="M32 14 18 24v16l14 10 14-10V24z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><circle cx="32" cy="32" r="5" fill="#6f86ff"/></svg>Onjaal</a>
+        <a class="brand" href="#top"><svg aria-hidden="true"><use href="#mark"/></svg>Onjaal</a>
         <p>A business technology brand building connected, practical software for growing businesses.</p>
       </div>
-      <div><h4>Products</h4><ul><li><a href="#hrms">Onjaal HRMS</a></li><li><a href="#products">Ecosystem</a></li></ul></div>
+      <div><h4>Products</h4><ul><li><a href="#hrms">Onjaal HRMS</a></li><li><a href="#products">Ecosystem</a></li><li><a href="#faq">FAQ</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#solutions">Solutions</a></li><li><a href="#contact">Contact</a></li></ul></div>
       <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li></ul></div>
     </div>
