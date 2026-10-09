@@ -59,8 +59,9 @@
     Object.keys(links).forEach(function (id) { var el = d.getElementById(id); if (el) obs.observe(el); });
   }
 
-  /* Concept window: tabs */
-  var tabs = $$('.app-tab');
+  /* Task tabs: each task shows one concept screen and highlights the matching sidebar item */
+  var tabs = $$('.task');
+  var side = $('#side');
   function selectTab(tab) {
     tabs.forEach(function (t) {
       var on = t === tab;
@@ -68,13 +69,14 @@
       t.tabIndex = on ? 0 : -1;
       $('#' + t.getAttribute('aria-controls')).hidden = !on;
     });
+    if (side) $$('li', side).forEach(function (li, i) { li.classList.toggle('on', i === Number(tab.getAttribute('data-side')) - 1); });
   }
   if (tabs.length) {
     selectTab(tabs[0]);
     tabs.forEach(function (t, i) {
       t.addEventListener('click', function () { selectTab(t); });
       t.addEventListener('keydown', function (e) {
-        var step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        var step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
         if (e.key === 'Home') step = -i;
         if (e.key === 'End') step = tabs.length - 1 - i;
         if (step === undefined) return;
@@ -133,9 +135,15 @@
   if (endpoint) notice.hidden = true;
   else if (email) $('#noticeText').textContent = 'Sending opens a draft in your email app. Your enquiry is only sent when you press send there.';
 
-  var intent = $('#intent'), msgOpt = $('#msgOpt');
-  function syncIntent() { msgOpt.textContent = intent.value === 'Ask a question' ? '(required)' : '(optional)'; }
-  intent.addEventListener('change', syncIntent);
+  var msgOpt = $('#msgOpt');
+  function intentValue() { var c = form.querySelector('input[name=intent]:checked'); return c ? c.value : ''; }
+  function needsMessage() { var v = intentValue(); return v === 'Ask a question' || v === 'Something else'; }
+  $$('input[name=intent]', form).forEach(function (r) {
+    r.addEventListener('change', function () {
+      msgOpt.textContent = needsMessage() ? '(required)' : '(optional)';
+      var m = form.elements.message.closest('.field'); if (!needsMessage()) m.classList.remove('invalid');
+    });
+  });
 
   function setStatus(msg, kind) {
     status.className = 'form-status show' + (kind ? ' ' + kind : '');
@@ -143,7 +151,7 @@
   }
   function validField(input) {
     var v = input.value.trim();
-    var ok = input.name === 'message' ? (intent.value !== 'Ask a question' || v.length > 0) : v.length > 0 && input.checkValidity();
+    var ok = input.name === 'message' ? (!needsMessage() || v.length > 0) : v.length > 0 && input.checkValidity();
     var f = input.closest('.field');
     f.classList.toggle('invalid', !ok);
     input.setAttribute('aria-invalid', String(!ok));
@@ -178,7 +186,7 @@
 
     var data = {
       name: form.elements.name.value.trim(), email: form.elements.email.value.trim(),
-      organization: form.elements.organization.value.trim(), intent: intent.value,
+      organization: form.elements.organization.value.trim(), intent: intentValue(),
       message: form.elements.message.value.trim()
     };
     var text = 'Name: ' + data.name + '\nEmail: ' + data.email +
