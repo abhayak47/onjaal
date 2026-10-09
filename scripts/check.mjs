@@ -30,7 +30,7 @@ for (const page of pages) {
     let absolute = false;
     if (url.startsWith(BASE)) { url = url.slice(BASE.length) || 'index.html'; absolute = true; }
     else if (/^https?:\/\//.test(url)) continue; // external: not checked offline
-    const [file, hash] = url.split('#');
+    const [file, hash] = url.split('#').map((x, i) => (i === 0 ? x.split('?')[0] : x));
     const target = file === '' ? (absolute ? 'index.html' : page) : file === '.' ? 'index.html' : file;
     const path = join(root, target);
     if (!existsSync(path)) { problems.push(`${page}: missing file "${url}"`); continue; }
@@ -45,6 +45,12 @@ for (const f of ['robots.txt', 'sitemap.xml', 'site.webmanifest', '404.html', 'a
 
 try { execFileSync('node', [join(root, 'scripts/sync-chrome.mjs'), '--check'], { stdio: 'pipe' }); }
 catch (e) { problems.push('header/footer out of sync: run node scripts/sync-chrome.mjs'); }
+try { execFileSync('node', [join(root, 'scripts/stamp-assets.mjs'), '--check'], { stdio: 'pipe' }); }
+catch (e) { problems.push('stale css/js version stamps: run node scripts/stamp-assets.mjs'); }
+
+// Every inline <svg> that uses a symbol must carry intrinsic width/height so it can never balloon to 300x150 if CSS is missing or stale
+for (const [page, html] of Object.entries(cache))
+  for (const m of html.matchAll(/<svg(?![^>]*\bwidth=)[^>]*>\s*<use/g)) problems.push(`${page}: <svg><use> without width/height attributes`);
 
 if (problems.length) { console.error(problems.join('\n')); process.exit(1); }
 console.log(`OK: ${pages.length} pages checked (${pages.join(', ')})`);

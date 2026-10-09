@@ -11,24 +11,31 @@ npx http-server . -p 8080      # or: python3 -m http.server 8080
 # open http://localhost:8080/
 ```
 
-## Checks (run before every deploy)
+## Build (run before every commit that touches html, css or js)
 ```bash
-node scripts/check.mjs          # links, anchors, assets, duplicate ids, titles, one h1, alt text, header/footer sync
+node scripts/build.mjs
 ```
+There is no compile step. "Build" means: (1) copy the shared header/footer from `index.html` into the other pages,
+(2) stamp `styles.css` and `main.js` URLs with a content hash (`?v=...`), (3) run the integrity checks
+(links, anchors, assets, duplicate ids, one h1, alt text, icon sizes, stamps current). It must print `OK`.
 
-## Editing the shared header and footer
-Edit them **once**, in `index.html` (between the `chrome:` comments), then run:
-```bash
-node scripts/sync-chrome.mjs    # copies them into privacy.html, terms.html and 404.html with correct links
-```
-`check.mjs` fails if the pages drift apart.
+Why the stamps matter: GitHub Pages caches assets for about 10 minutes. Without a changing URL, a browser can combine
+new HTML with an old `styles.css`, which renders giant icons and a stretched layout. Never edit the `?v=` values by hand.
+
+Individual steps: `node scripts/sync-chrome.mjs`, `node scripts/stamp-assets.mjs`, `node scripts/check.mjs`.
+Edit the shared header and footer **once**, in `index.html` between the `chrome:` comments.
+
+### Troubleshooting: page looks unstyled or has huge icons
+Hard-refresh (Ctrl/Cmd+Shift+R). If it persists, confirm the HTML references the current stamp:
+`curl -s https://abhayak47.github.io/onjaal/ | grep styles.css` and that `styles.css?v=<same value>` returns 200.
+Every inline icon carries explicit `width`/`height`, so even without CSS the page degrades to a readable layout.
 
 ## Deploy (GitHub Pages)
 Served from `https://abhayak47.github.io/onjaal/`. All asset paths are relative, so it works under the `/onjaal/`
 sub-path. Deploying means merging into the branch that Pages publishes (see **Settings > Pages**; this
 was not verifiable from the build environment, and no deployment configuration was changed).
 
-1. Run the checks above.
+1. Run `node scripts/build.mjs` and commit any files it changed.
 2. Merge the working branch into `main` through a pull request.
 3. When the Pages build finishes, open the live URL and test the enquiry form (below).
 
@@ -61,7 +68,7 @@ pre-filled draft in the visitor's email app. That is not delivery, and the page 
 - `assets/css/styles.css` tokens (colour, spacing, type, radii), components, sections
 - `assets/js/main.js` menu, task tabs, concept interactions, form
 - `assets/fonts/` self-hosted Inter (SIL OFL, see `LICENSE.txt`), Latin subset
-- `scripts/` `check.mjs`, `sync-chrome.mjs`
+- `scripts/` `build.mjs` (runs the others), `sync-chrome.mjs`, `stamp-assets.mjs`, `check.mjs`
 - `docs/CLAIMS.md` register of every product claim and its evidence level
 
 ## Content rules
