@@ -2,6 +2,7 @@
 // Static integrity check for the Onjaal site. No dependencies.
 // Usage: node scripts/check.mjs   (exit code 1 on any problem)
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -41,6 +42,9 @@ for (const page of pages) {
 }
 for (const f of ['robots.txt', 'sitemap.xml', 'site.webmanifest', '404.html', 'assets/og-image.png', 'assets/apple-touch-icon.png'])
   if (!existsSync(join(root, f))) problems.push(`missing ${f}`);
+
+try { execFileSync('node', [join(root, 'scripts/sync-chrome.mjs'), '--check'], { stdio: 'pipe' }); }
+catch (e) { problems.push('header/footer out of sync: run node scripts/sync-chrome.mjs'); }
 
 if (problems.length) { console.error(problems.join('\n')); process.exit(1); }
 console.log(`OK: ${pages.length} pages checked (${pages.join(', ')})`);
