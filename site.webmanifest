@@ -1,0 +1,13 @@
+{
+  "name": "Onjaal",
+  "short_name": "Onjaal",
+  "description": "Onjaal HRMS: better-organized HR. From Onjaal, a business technology company.",
+  "start_url": ".",
+  "display": "browser",
+  "background_color": "#f7f6f3",
+  "theme_color": "#f7f6f3",
+  "icons": [
+    {"src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abhayak47.github.io/onjaal/sitemap.xml
